@@ -10,29 +10,37 @@ class DemoPage extends StatelessWidget {
       appBar: AppBar(title: Text('appbarTitle')),
       body: Column(
         children: [
-          ElevatedButton(
-            onPressed: () {
-              AppRouter.push(PagePath.provider);
-            },
-            child: Text('providerDemo'),
-          ),
-          TextButton(
-            onPressed: () {
-              AppRouter.push(PagePath.login);
-            },
-            child: Text("去登陆"),
-          ),
-          TextButton(
-            onPressed: () {
-              AppRouter.push(PagePath.home);
-            },
-            child: Text("去首页"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              AppRouter.push(PagePath.roomDetail, extra: "123456");
-            },
-            child: Text(PagePath.roomDetail),
+          Row(
+            children: [
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      AppRouter.push(PagePath.provider);
+                    },
+                    child: Text('provider'),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      AppRouter.push(PagePath.login);
+                    },
+                    child: Text("去登陆"),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      AppRouter.push(PagePath.home);
+                    },
+                    child: Text("去首页"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      AppRouter.push(PagePath.roomDetail, extra: "123456");
+                    },
+                    child: Text(PagePath.roomDetail),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
