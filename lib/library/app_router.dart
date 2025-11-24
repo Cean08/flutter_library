@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_library/library/repaint/repaint_demo.dart';
 import 'package:flutter_library/pages/provider/provider_demo.dart';
 import 'package:go_router/go_router.dart';
 import 'ui/tabbar_page.dart';
@@ -13,6 +14,7 @@ abstract class PagePath {
   static const register = '/register';
   static const roomDetail = '/room_detail';
   static const provider = '/provider';
+  static const repaint = '/repaint';
 }
 
 // 定义路由表和extra参数
@@ -23,6 +25,7 @@ _routes() {
     PagePath.register: (context, state) => RegisterPage(),
     PagePath.roomDetail: (context, state) => RoomDetail(roomId: state.extra),
     PagePath.provider: (context, state) => ProviderDemo(),
+    PagePath.repaint: (context, state) => RepaintDemo(),
     // PagePath.webview: (context, state) => WebViewPage(
     //   url: state.extra,
     //   title: AppRouter.getParam(context, 'title'),

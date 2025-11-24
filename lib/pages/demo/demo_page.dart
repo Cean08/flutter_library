@@ -11,34 +11,36 @@ class DemoPage extends StatelessWidget {
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      AppRouter.push(PagePath.provider);
-                    },
-                    child: Text('provider'),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      AppRouter.push(PagePath.login);
-                    },
-                    child: Text("去登陆"),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      AppRouter.push(PagePath.home);
-                    },
-                    child: Text("去首页"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      AppRouter.push(PagePath.roomDetail, extra: "123456");
-                    },
-                    child: Text(PagePath.roomDetail),
-                  ),
-                ],
+              ElevatedButton(
+                onPressed: () {
+                  AppRouter.push(PagePath.provider);
+                },
+                child: Text('provider'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  AppRouter.push(PagePath.repaint);
+                },
+                child: Text('高频数据刷新'),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              TextButton(
+                onPressed: () {
+                  AppRouter.push(PagePath.login);
+                },
+                child: Text("去登陆"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  AppRouter.push(PagePath.roomDetail, extra: "123456");
+                },
+                child: Text(PagePath.roomDetail),
               ),
             ],
           ),

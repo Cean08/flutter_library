@@ -120,3 +120,4 @@ samples, guidance on mobile development, and a full API reference.
  * Flutter Snippets - 提供大量常用 Flutter 代码片段
  * Flutter Enhancement Suite - 增强 Flutter 开发体验
  * Flutter Intl - 国际化（i18n）的插件
+ * FlutterJsonBeanFactory

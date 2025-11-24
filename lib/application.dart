@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'library/app_router.dart';
 import 'library/ui/tabbar_page.dart';
 
-/*
+
 class Application extends StatelessWidget {
   const Application({super.key});
 
@@ -19,8 +19,9 @@ class Application extends StatelessWidget {
     );
   }
 }
- */
 
+
+/*
 class Application extends StatelessWidget {
   Application({super.key});
 
@@ -48,3 +49,5 @@ class ThemeController extends GetxController {
     Get.changeTheme(isDarkMode.value ? ThemeData.dark(): ThemeData.light());
   }
 }
+
+ */
