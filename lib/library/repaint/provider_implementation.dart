@@ -106,17 +106,32 @@ class ProviderImplementation extends StatelessWidget {
       itemCount: stocks.length,
       itemBuilder: (context, index) {
         final stock = stocks[index];
-        return _StockItem(stock: stock);
+        return RepaintBoundary(
+          child: _StockItem(stock: stock),
+        );
+        // return _StockItem(stock: stock);
       },
     );
   }
 }
 
+/* RepaintBoundary的使用时机：
+并不是所有情况都需要使用RepaintBoundary。它会在GPU中创建一个新的图层，这可能会增加内存开销。
+因此，只有在确实遇到性能问题，且通过性能分析确定是重绘导致的性能问题时，才应该使用。
+
+性能分析：
+使用Flutter Performance工具查看重绘区域，如果发现大面积重绘，则可以考虑使用RepaintBoundary来隔离重绘。
+测试：在真实设备上测试性能，确保RepaintBoundary确实带来了性能提升
+但是，如果列表项非常简单（比如只是文本），那么重绘开销本身很小，
+使用RepaintBoundary可能带来的性能提升有限，甚至可能因为额外图层的创建而增加开销。
+因此，实际使用时需要根据具体情况权衡。
+ */
+
 // 复用相同的 StockItem widget
 class _StockItem extends StatelessWidget {
   final Stock stock;
 
-  const _StockItem({Key? key, required this.stock}) : super(key: key);
+  const _StockItem({super.key, required this.stock});
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +145,7 @@ class _StockItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withValues(alpha: 0.2),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),

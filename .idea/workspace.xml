@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8d88b7-7782-411a-858d-1ed543770892" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/library/repaint/provider_implementation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/library/repaint/repaint_demo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/library/repaint/stock.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/library/repaint/stock_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/library/repaint/stream_implementation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/library/repaint/valuenotifier_implementation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/application.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/application.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/library/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/library/app_router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/demo/demo_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/demo/demo_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/library/repaint/provider_implementation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/library/repaint/provider_implementation.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
