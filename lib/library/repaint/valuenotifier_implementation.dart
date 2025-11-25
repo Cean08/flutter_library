@@ -6,13 +6,12 @@ import 'stock.dart';
 import 'stock_service.dart';
 
 /// ValueNotifier: 简单的状态管理，组件数量不多，追求轻量级解决方案
-/*
-关键方法说明：
-ValueNotifier<T>(initialValue)	创建可监听的值容器
-valueNotifier.value	            获取或设置值，设置时会自动通知监听器
-ValueListenableBuilder()	      UI组件，监听 ValueNotifier 变化并重建
-valueListenable.addListener()	  手动添加监听器（ValueListenableBuilder 内部使用）
- */
+/// 关键方法说明：
+/// ValueNotifier<T>(initialValue)	创建可监听的值容器
+/// valueNotifier.value	            获取或设置值，设置时会自动通知监听器
+/// ValueListenableBuilder()	      UI组件，监听 ValueNotifier 变化并重建
+/// valueListenable.addListener()	  手动添加监听器（ValueListenableBuilder 内部使用）
+
 class ValueNotifierStockManager {
   // 1. 创建 ValueNotifier
   final ValueNotifier<List<Stock>> _stocks = ValueNotifier([]);

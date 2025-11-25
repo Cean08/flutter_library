@@ -6,14 +6,12 @@ import 'stock_service.dart';
 
 
 /// Provider: 大型应用，需要良好的架构和可测试性，状态逻辑复杂, 性能较高（选择性重建）
-/*
-关键方法说明：
-with ChangeNotifier	      混入变更通知能力
-notifyListeners()	        通知所有监听者数据已变更
-ChangeNotifierProvider()	在 widget 树中提供 ChangeNotifier 实例
-Consumer<T>()	            UI组件，监听指定的 Provider 并重建
-Provider.of<T>(context)	  另一种获取 Provider 的方式
- */
+/// 关键方法说明：
+/// with ChangeNotifier	      混入变更通知能力
+/// notifyListeners()	        通知所有监听者数据已变更
+/// ChangeNotifierProvider()	在 widget 树中提供 ChangeNotifier 实例
+/// Consumer<T>()	            UI组件，监听指定的 Provider 并重建
+/// Provider.of<T>(context)	  另一种获取 Provider 的方式
 
 // 1. 创建继承 ChangeNotifier 的数据类
 class StockProvider with ChangeNotifier {

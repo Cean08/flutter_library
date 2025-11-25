@@ -4,13 +4,12 @@ import 'stock.dart';
 import 'stock_service.dart';
 
 /// Stream: 适合需要复杂数据流操作（过滤、转换等），或有多个独立组件需要监听同一数据源
-/* 关键方法说明：
-StreamController<T>.broadcast()	  创建广播流控制器，允许多个监听器
-streamController.stream	          获取数据流供外部订阅
-streamController.add(data)	      向流中添加新数据，触发监听器更新
-StreamBuilder()	                  UI组件，自动监听流数据变化并重建
-Timer.periodic()	                定时器，用于周期性触发数据更新
- */
+/// 关键方法说明：
+/// StreamController<T>.broadcast()	  创建广播流控制器，允许多个监听器
+/// streamController.stream	          获取数据流供外部订阅
+/// streamController.add(data)	      向流中添加新数据，触发监听器更新
+/// StreamBuilder()	                  UI组件，自动监听流数据变化并重建
+/// Timer.periodic()	                定时器，用于周期性触发数据更新、
 
 class StreamStockManager {
   // 1. 创建 StreamController

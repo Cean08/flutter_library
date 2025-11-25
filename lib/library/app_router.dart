@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_library/library/repaint/repaint_demo.dart';
 import 'package:flutter_library/pages/provider/provider_demo.dart';
@@ -12,10 +13,24 @@ abstract class PagePath {
   static const home = '/';
   static const login = '/login';
   static const register = '/register';
+  static const forgotPassword = '/forgot-password';
+  static const about = '/about';
+  static const privacyPolicy = '/privacy-policy';
+  static const terms = '/terms';
   static const roomDetail = '/room_detail';
   static const provider = '/provider';
   static const repaint = '/repaint';
 }
+
+// 定义不需要登录拦截的公开路由
+final _publicRoutes = {
+  PagePath.login,
+  PagePath.register,
+  PagePath.forgotPassword,
+  PagePath.about,
+  PagePath.privacyPolicy,
+  PagePath.terms,
+};
 
 // 定义路由表和extra参数
 _routes() {
@@ -64,7 +79,28 @@ class AppRouter {
       ],
       errorBuilder:
           errorPage ?? (context, state) => DefaultPage404(state: state),
-      redirect: redirect,
+      redirect:
+          redirect ??
+          (context, state) {
+            // 未登录处理
+            final isLoggedIn= true; // authService.isLoggedIn;
+
+            // 不需要登录拦截的公开路由
+            final isPublicRoute = _publicRoutes.contains(state.fullPath);
+
+            // 如果未登录且当前不是公开路由，重定向到登录页
+            if (!isLoggedIn && !isPublicRoute) {
+              return '/login?from=${Uri.encodeComponent(state.fullPath as String)}';
+            }
+
+            // 如果已登录但当前是登录页，重定向到首页或原目标页
+            if (isLoggedIn && state.fullPath == PagePath.login) {
+              final from = state.uri.queryParameters['from'];
+              return from ?? '/';
+            }
+
+            return null; // 不重定向
+          },
     );
   }
 
@@ -107,6 +143,10 @@ class AppRouter {
       _logError('Route "$path" not registered');
       // 继续执行，让go_router map 路径去判断
       // return isPush ? Future.value(null) : null;
+    }
+
+    if (kDebugMode) {
+      print('跳转页面:$path, 携带params: $params & extra: $extra');
     }
 
     final uri = Uri(path: path, queryParameters: _convertParams(params));
