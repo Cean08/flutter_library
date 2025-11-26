@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_library/library/app_router.dart';
+import 'package:flutter_library/library/router/app_router.dart';
 
 class HomeRecommand extends StatelessWidget {
   const HomeRecommand({super.key});

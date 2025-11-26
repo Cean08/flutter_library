@@ -1,12 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_library/library/repaint/repaint_demo.dart';
+import 'package:flutter_library/pages/demo/screenutil_demo.dart';
 import 'package:flutter_library/pages/provider/provider_demo.dart';
 import 'package:go_router/go_router.dart';
-import 'ui/tabbar_page.dart';
-import '../pages/home/room_detail.dart';
-import '../pages/login.dart';
-import '../pages/register.dart';
+import '../ui/tabbar_page.dart';
+import '../../pages/home/room_detail.dart';
+import '../../pages/login.dart';
+import '../../pages/register.dart';
 
 // 配置映射
 abstract class PagePath {
@@ -17,9 +18,11 @@ abstract class PagePath {
   static const about = '/about';
   static const privacyPolicy = '/privacy-policy';
   static const terms = '/terms';
+
   static const roomDetail = '/room_detail';
   static const provider = '/provider';
   static const repaint = '/repaint';
+  static const screenutil = '/screenutil';
 }
 
 // 定义不需要登录拦截的公开路由
@@ -41,6 +44,7 @@ _routes() {
     PagePath.roomDetail: (context, state) => RoomDetail(roomId: state.extra),
     PagePath.provider: (context, state) => ProviderDemo(),
     PagePath.repaint: (context, state) => RepaintDemo(),
+    PagePath.screenutil: (context, state) => ScreenutilDemo(),
     // PagePath.webview: (context, state) => WebViewPage(
     //   url: state.extra,
     //   title: AppRouter.getParam(context, 'title'),

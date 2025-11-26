@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_library/library/app_router.dart';
+import 'package:flutter_library/library/router/app_router.dart';
 
 class DemoPage extends StatelessWidget {
   const DemoPage({super.key});
@@ -30,9 +30,15 @@ class DemoPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  AppRouter.push(PagePath.screenutil);
+                },
+                child: Text("屏幕适配"),
+              ),
               TextButton(
                 onPressed: () {
-                  AppRouter.push(PagePath.login);
+                  AppRouter.go(PagePath.login);
                 },
                 child: Text("去登陆"),
               ),

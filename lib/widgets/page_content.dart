@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_library/library/app_router.dart';
+import 'package:flutter_library/library/router/app_router.dart';
 
 class PageContent extends StatelessWidget {
   final String name;
@@ -18,7 +18,10 @@ class PageContent extends StatelessWidget {
         ),
         surfaceTintColor: Colors.white,
       ),
-      body: Container(),
+      body: Container(
+        color: Colors.green,
+        decoration: BoxDecoration(color: Colors.blue),
+      ),
     );
   }
 }

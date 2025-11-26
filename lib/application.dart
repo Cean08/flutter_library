@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'library/app_router.dart';
+import 'library/router/app_router.dart';
 import 'library/ui/tabbar_page.dart';
 
 
