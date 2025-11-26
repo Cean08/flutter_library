@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8d88b7-7782-411a-858d-1ed543770892" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pages/demo/screenutil_demo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/application.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/application.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/library/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/library/router/app_router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/demo/demo_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/demo/demo_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/home/home_navigator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home/home_navigator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/home/home_recommand.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home/home_recommand.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/library/router/app_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/library/router/app_router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/demo/screenutil_demo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/demo/screenutil_demo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/mine/mine_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/mine/mine_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/register.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/page_content.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/page_content.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

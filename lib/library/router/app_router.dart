@@ -38,13 +38,13 @@ final _publicRoutes = {
 // 定义路由表和extra参数
 _routes() {
   return {
-    PagePath.home: (context, state) => TabBarPage(index: 0),
-    PagePath.login: (context, state) => LoginPage(),
-    PagePath.register: (context, state) => RegisterPage(),
+    PagePath.home: (context, state) => const TabBarPage(index: 0),
+    PagePath.login: (context, state) => const LoginPage(),
+    PagePath.register: (context, state) => const RegisterPage(),
     PagePath.roomDetail: (context, state) => RoomDetail(roomId: state.extra),
-    PagePath.provider: (context, state) => ProviderDemo(),
-    PagePath.repaint: (context, state) => RepaintDemo(),
-    PagePath.screenutil: (context, state) => ScreenutilDemo(),
+    PagePath.provider: (context, state) => const ProviderDemo(),
+    PagePath.repaint: (context, state) => const RepaintDemo(),
+    PagePath.screenutil: (context, state) => const ScreenutilDemo(),
     // PagePath.webview: (context, state) => WebViewPage(
     //   url: state.extra,
     //   title: AppRouter.getParam(context, 'title'),
@@ -87,7 +87,7 @@ class AppRouter {
           redirect ??
           (context, state) {
             // 未登录处理
-            final isLoggedIn= true; // authService.isLoggedIn;
+            final isLoggedIn = true; // authService.isLoggedIn;
 
             // 不需要登录拦截的公开路由
             final isPublicRoute = _publicRoutes.contains(state.fullPath);

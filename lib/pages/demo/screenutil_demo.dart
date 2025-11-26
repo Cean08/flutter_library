@@ -8,7 +8,8 @@ class ScreenutilDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       // 设计稿尺寸 (单位: dp)
-      designSize: const Size(375, 812), // iPhone 13 尺寸
+      designSize: const Size(375, 812),
+      // iPhone 13 尺寸
       // 是否根据宽度/高度中的最小值适配文字
       minTextAdapt: true,
       // 分屏模式适配
@@ -16,13 +17,12 @@ class ScreenutilDemo extends StatelessWidget {
 
       // 构建器
       builder: (context, child) {
-        return MaterialApp(
-          title: '屏幕适配示例',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          home: child,
-        );
+        // return MaterialApp(
+        //   title: '屏幕适配示例',
+        //   theme: ThemeData(primarySwatch: Colors.blue),
+        //   home: child,
+        // );
+        return Container(child: child);
       },
       child: const ScreenutilPage(),
     );
@@ -56,7 +56,6 @@ class ScreenutilPage extends StatelessWidget {
             _buildSizeAdaptationExample(),
 
             SizedBox(height: 20.h), // 使用 .h 适配高度
-
             // 2. 间距适配示例
             _buildSpacingAdaptationExample(),
 
@@ -87,39 +86,34 @@ class ScreenutilPage extends StatelessWidget {
       children: [
         Text(
           '1. 尺寸适配',
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.h),
         Row(
           children: [
             Container(
-              width: 100.w,  // 设计稿中 100dp 的宽度
-              height: 60.h,  // 设计稿中 60dp 的高度
+              width: 100.w,
+              // 设计稿中 100dp 的宽度
+              height: 60.h,
+              // 设计稿中 60dp 的高度
               color: Colors.blue,
               alignment: Alignment.center,
               child: Text(
                 '100×60',
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: Colors.white,
-                ),
+                style: TextStyle(fontSize: 12.sp, color: Colors.white),
               ),
             ),
             SizedBox(width: 10.w),
             Container(
-              width: 150.w, // 设计稿中 150dp 的宽度
-              height: 80.h, // 设计稿中 80dp 的高度
+              width: 150.w,
+              // 设计稿中 150dp 的宽度
+              height: 80.h,
+              // 设计稿中 80dp 的高度
               color: Colors.green,
               alignment: Alignment.center,
               child: Text(
                 '150×80',
-                style: TextStyle(
-                  fontSize: 12.sp,
-                  color: Colors.white,
-                ),
+                style: TextStyle(fontSize: 12.sp, color: Colors.white),
               ),
             ),
           ],
@@ -148,16 +142,13 @@ class ScreenutilPage extends StatelessWidget {
       children: [
         Text(
           '2. 间距适配',
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.h),
         Container(
           padding: EdgeInsets.symmetric(
             horizontal: 20.w, // 水平方向 20dp
-            vertical: 15.h,   // 垂直方向 15dp
+            vertical: 15.h, // 垂直方向 15dp
           ),
           decoration: BoxDecoration(
             color: Colors.orange[100],
@@ -189,11 +180,7 @@ class ScreenutilPage extends StatelessWidget {
   }
 
   Widget _buildSpacingBox(Color color) {
-    return Container(
-      width: 50.w,
-      height: 50.h,
-      color: color,
-    );
+    return Container(width: 50.w, height: 50.h, color: color);
   }
 
   // 字体适配示例组件
@@ -203,10 +190,7 @@ class ScreenutilPage extends StatelessWidget {
       children: [
         Text(
           '3. 字体大小适配',
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.h),
         Container(
@@ -271,10 +255,7 @@ class ScreenutilPage extends StatelessWidget {
       children: [
         Text(
           '4. 圆角边框适配',
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.h),
         Row(
@@ -308,11 +289,7 @@ class ScreenutilPage extends StatelessWidget {
                   width: 1.w, // 边框宽度适配
                 ),
               ),
-              child: Icon(
-                Icons.favorite,
-                size: 24.r,
-                color: Colors.teal,
-              ),
+              child: Icon(Icons.favorite, size: 24.r, color: Colors.teal),
             ),
             Container(
               width: 80.w,
@@ -325,11 +302,7 @@ class ScreenutilPage extends StatelessWidget {
                   width: 3.w, // 边框宽度适配
                 ),
               ),
-              child: Icon(
-                Icons.thumb_up,
-                size: 24.r,
-                color: Colors.pink,
-              ),
+              child: Icon(Icons.thumb_up, size: 24.r, color: Colors.pink),
             ),
           ],
         ),
@@ -353,10 +326,7 @@ class ScreenutilPage extends StatelessWidget {
       children: [
         Text(
           '5. 响应式布局',
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10.h),
 
@@ -372,10 +342,7 @@ class ScreenutilPage extends StatelessWidget {
             children: [
               Text(
                 '屏幕信息:',
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
               ),
               SizedBox(height: 8.h),
               Text('屏幕宽度: ${screenUtil.screenWidth}px'),
@@ -398,7 +365,8 @@ class ScreenutilPage extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 10.w,
           mainAxisSpacing: 10.h,
-          childAspectRatio: 1.5, // 宽高比
+          childAspectRatio: 1.5,
+          // 宽高比
           children: List.generate(4, (index) {
             return Container(
               decoration: BoxDecoration(
@@ -417,11 +385,14 @@ class ScreenutilPage extends StatelessWidget {
             );
           }),
         ),
+
+        SizedBox(height: 15.h),
+        Text('注意事项'),
+        ImportantNotes(),
       ],
     );
   }
 }
-
 
 ///ScreenUtil 正确使用方法
 // 在任意地方使用 ScreenUtil 的方法
@@ -431,58 +402,53 @@ class UtilsExample {
     final screenUtil = ScreenUtil();
 
     // 尺寸适配方法
-    double width = 100.w;    // 宽度适配: 设计稿 100dp → 实际宽度
-    double height = 50.h;    // 高度适配: 设计稿 50dp → 实际高度
-    double radius = 8.r;     // 圆角适配: 设计稿 8dp → 实际圆角
+    double width = 100.w; // 宽度适配: 设计稿 100dp → 实际宽度
+    double height = 50.h; // 高度适配: 设计稿 50dp → 实际高度
+    double radius = 8.r; // 圆角适配: 设计稿 8dp → 实际圆角
     double fontSize = 16.sp; // 字体适配: 设计稿 16dp → 实际字体大小
 
     // 获取屏幕信息
-    double screenWidth = screenUtil.screenWidth;     // 屏幕宽度
-    double screenHeight = screenUtil.screenHeight;   // 屏幕高度
-    double pixelRatio = screenUtil.pixelRatio as double;       // 设备像素比
-    double scaleWidth = screenUtil.scaleWidth;       // 宽度缩放比例
-    double scaleHeight = screenUtil.scaleHeight;     // 高度缩放比例
+    double screenWidth = screenUtil.screenWidth; // 屏幕宽度
+    double screenHeight = screenUtil.screenHeight; // 屏幕高度
+    double pixelRatio = screenUtil.pixelRatio as double; // 设备像素比
+    double scaleWidth = screenUtil.scaleWidth; // 宽度缩放比例
+    double scaleHeight = screenUtil.scaleHeight; // 高度缩放比例
 
     // 安全区域
     double statusBarHeight = screenUtil.statusBarHeight; // 状态栏高度
     double bottomBarHeight = screenUtil.bottomBarHeight; // 底部安全区域高度
 
     // 尺寸转换方法 (可选，直接使用扩展更简洁)
-    double actualWidth = screenUtil.setWidth(100);   // 同 100.w
-    double actualHeight = screenUtil.setHeight(50);  // 同 50.h
-    double actualSp = screenUtil.setSp(16);          // 同 16.sp
-    double radius2 = screenUtil.radius(8);           // 同 8.r
+    double actualWidth = screenUtil.setWidth(100); // 同 100.w
+    double actualHeight = screenUtil.setHeight(50); // 同 50.h
+    double actualSp = screenUtil.setSp(16); // 同 16.sp
+    double radius2 = screenUtil.radius(8); // 同 8.r
   }
 }
 
 class ImportantNotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('注意事项'),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16.r),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              '使用 ScreenUtil 的注意事项:',
-              style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 16.h),
-            _buildNoteItem('1. 设计稿尺寸单位是 dp，不是 px'),
-            _buildNoteItem('2. .w 基于宽度适配，.h 基于高度适配'),
-            _buildNoteItem('3. .sp 用于字体大小适配（会自动考虑系统字体大小）'),
-            _buildNoteItem('4. .r 用于圆角、边框等同时需要宽高适配的场景'),
-            _buildNoteItem('5. 确保在 MaterialApp 外层包裹 ScreenUtilInit'),
-            _buildNoteItem('6. 不需要手动调用 ScreenUtil.init()'),
-            _buildNoteItem('7. 在 StatelessWidget 中直接使用 .w .h .sp .r 扩展'),
-            _buildNoteItem('8. 在需要屏幕信息时，使用 ScreenUtil() 实例'),
-            _buildNoteItem('9. ssp 已废弃，统一使用 sp 进行字体适配'),
-          ],
-        ),
+    return Padding(
+      padding: EdgeInsets.all(16.r),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '使用 ScreenUtil 的注意事项:',
+            style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16.h),
+          _buildNoteItem('1. 设计稿尺寸单位是 dp，不是 px'),
+          _buildNoteItem('2. .w 基于宽度适配，.h 基于高度适配'),
+          _buildNoteItem('3. .sp 用于字体大小适配（会自动考虑系统字体大小）'),
+          _buildNoteItem('4. .r 用于圆角、边框等同时需要宽高适配的场景'),
+          _buildNoteItem('5. 确保在 MaterialApp 外层包裹 ScreenUtilInit'),
+          _buildNoteItem('6. 不需要手动调用 ScreenUtil.init()'),
+          _buildNoteItem('7. 在 StatelessWidget 中直接使用 .w .h .sp .r 扩展'),
+          _buildNoteItem('8. 在需要屏幕信息时，使用 ScreenUtil() 实例'),
+          _buildNoteItem('9. ssp 已废弃，统一使用 sp 进行字体适配'),
+        ],
       ),
     );
   }
@@ -496,10 +462,7 @@ class ImportantNotes extends StatelessWidget {
           Icon(Icons.circle, size: 8.r),
           SizedBox(width: 8.w),
           Expanded(
-            child: Text(
-              text,
-              style: TextStyle(fontSize: 14.sp),
-            ),
+            child: Text(text, style: TextStyle(fontSize: 14.sp)),
           ),
         ],
       ),
