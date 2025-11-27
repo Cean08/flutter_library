@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_library/pages/provider/getx_router.dart';
 import 'package:get/get.dart';
 import 'library/router/app_router.dart';
 import 'library/ui/tabbar_page.dart';
@@ -9,14 +10,15 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppRouter.init();
-    return MaterialApp.router(
-      routerConfig: AppRouter.router,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(color: Colors.green, iconTheme: IconThemeData(color: Colors.white)),
-        primaryColor: Colors.green,
-      ),
-    );
+    // AppRouter.init();
+    // return MaterialApp.router(
+    //   routerConfig: AppRouter.router,
+    //   theme: ThemeData(
+    //     appBarTheme: AppBarTheme(color: Colors.green, iconTheme: IconThemeData(color: Colors.white)),
+    //     primaryColor: Colors.green,
+    //   ),
+    // );
+    return RouteManager.initApp();
   }
 }
 

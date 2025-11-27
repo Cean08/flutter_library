@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_library/library/router/app_router.dart';
 
+import '../provider/getx_router.dart';
+
 class DemoPage extends StatelessWidget {
   const DemoPage({super.key});
 
@@ -47,6 +49,17 @@ class DemoPage extends StatelessWidget {
                   AppRouter.push(PagePath.roomDetail, extra: "123456");
                 },
                 child: Text(PagePath.roomDetail),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  RouteManager.toNamed(GetxPath.about);
+                },
+                child: Text("Getx 路由"),
               ),
             ],
           ),
