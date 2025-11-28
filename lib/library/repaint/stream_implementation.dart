@@ -18,7 +18,6 @@ class StreamStockManager {
 
   // 2. 暴露 Stream 供外部订阅
   Stream<List<Stock>> get stockStream => _stockStreamController.stream;
-
   // 3. 启动定时更新
   void startUpdates() {
     // 初始数据

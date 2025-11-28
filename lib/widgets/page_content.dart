@@ -5,7 +5,6 @@ import 'package:flutter_library/library/router/app_router.dart';
 
 class PageContent extends StatelessWidget {
   final String name;
-
   const PageContent({super.key, required this.name});
 
   @override
